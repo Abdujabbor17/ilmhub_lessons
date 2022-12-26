@@ -1,3 +1,4 @@
+import 'package:birinchi_proyekt/second_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +17,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+        '/SecondPage': (context) => const SecondPage(),
+      },
     );
   }
 }
@@ -31,22 +35,89 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {});
-      _counter++;
-      print(_counter);
-
-  }
+  // int _counter = 0;
+  //
+  // void _incrementCounter() {
+  //   setState(() {});
+  //     _counter++;
+  //     print(_counter);
+  //
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ilmhub'),
+        title: const Text('Ilmhub'),
       ),
       body: Column(
+        children: [
+          Container(
+            height: 250,
+            color: Colors.white,
+            child: Row(
+              children: [
+                Expanded(
+                    flex: 2,
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
+                      height: 250,
+                      color: Colors.lightGreen,
+                      child: const Text(
+                        'Logo Area',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    )),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    height: 250,
+                    color: Colors.green,
+                    child: const Text(
+                      'header Area',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+              child: Row(
+                children: [
+                  Container(
+                    height: double.infinity,
+                    width: 250,
+                    color: Colors.blue,
+                    child: const Text(
+                      'Abror',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                  Container(
+                    height: double.infinity,
+                    width: 160,
+                    color: Colors.brown,
+                    child:  Center(
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context,'/SecondPage');
+                            },
+                            child: Text('Second page')
+                        )
+                    ),
+                  )
+                ],
+              )),
+        ],
+      )
+
+
+
+
+
+      /*Column(
            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
            children: [
              Container(
@@ -104,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
            ],
 
-        ),
+        ),*/
 
 
 
@@ -157,11 +228,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),*/
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: _incrementCounter,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
