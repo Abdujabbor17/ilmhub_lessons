@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Intermediate(),
+      home: const Intermediate(), //bu homePage
       routes: {
         '/SecondPage': (context) => const SecondPage(),
       },
