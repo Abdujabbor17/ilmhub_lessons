@@ -1,4 +1,5 @@
 import 'package:birinchi_proyekt/second_page.dart';
+import 'package:birinchi_proyekt/ui_intermediate.dart';
 import 'package:flutter/material.dart';
 
 import 'loginPage.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      home: const Intermediate(),
       routes: {
         '/SecondPage': (context) => const SecondPage(),
       },
