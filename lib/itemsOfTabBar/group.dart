@@ -1,16 +1,29 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class GroupPage extends StatelessWidget {
-  const GroupPage({Key? key}) : super(key: key);
+import '../items/itemOfCalls.dart';
 
+class GroupPage extends StatelessWidget {
+  GroupPage({Key? key}) : super(key: key);
+
+  var names = [
+    'Abror',
+    'G\'olib',
+    'Asadbek',
+    'Bahrom',
+    'Faxriddin',
+    'Abduqodir',
+    'Farhod',
+    'Muhammad'
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
-      child: Center(
-        child:Text('Group Page'),
-      ),
+        child: ListView.builder(
+            itemCount: 3,
+            itemBuilder: (context,index){
+              return call(names[index]);
+            })
     );
   }
 }

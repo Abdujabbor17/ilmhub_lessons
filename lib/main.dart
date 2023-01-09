@@ -3,9 +3,11 @@ import 'package:birinchi_proyekt/tabBar.dart';
 import 'package:birinchi_proyekt/ui_intermediate.dart';
 import 'package:flutter/material.dart';
 
+import 'calls.dart';
 import 'lists.dart';
 import 'loginPage.dart';
 import 'inputs.dart';
+import 'messages.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const TabBarExample(), //bu homePage
+      home: const Calls(), //bu homePage
       routes: {
         '/SecondPage': (context) => const SecondPage(),
       },
