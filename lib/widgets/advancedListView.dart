@@ -1,17 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'items/storyItem.dart';
+import '../items/storyItem.dart';
 
 
-class GridViewExample extends StatefulWidget {
-  const GridViewExample({Key? key}) : super(key: key);
+class ListViewAdvanced extends StatefulWidget {
+  const ListViewAdvanced({Key? key}) : super(key: key);
 
   @override
-  State<GridViewExample> createState() => _GridViewExampleState();
+  State<ListViewAdvanced> createState() => _ListViewAdvancedState();
 }
 
-class _GridViewExampleState extends State<GridViewExample> {
+class _ListViewAdvancedState extends State<ListViewAdvanced> {
   bool isClick = false;
   @override
   Widget build(BuildContext context) {

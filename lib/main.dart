@@ -1,14 +1,16 @@
-import 'package:birinchi_proyekt/second_page.dart';
-import 'package:birinchi_proyekt/tabBar.dart';
-import 'package:birinchi_proyekt/ui_intermediate.dart';
+import 'package:birinchi_proyekt/todoList/addItem.dart';
+import 'package:birinchi_proyekt/todoList/todolist.dart';
+import 'package:birinchi_proyekt/widgets/second_page.dart';
+import 'package:birinchi_proyekt/widgets/tabBar.dart';
+import 'package:birinchi_proyekt/widgets/ui_intermediate.dart';
 import 'package:flutter/material.dart';
 
-import 'advancedListView.dart';
-import 'calls.dart';
-import 'lists.dart';
-import 'loginPage.dart';
-import 'inputs.dart';
-import 'messages.dart';
+import 'widgets/advancedListView.dart';
+import 'widgets/gridview.dart';
+import 'widgets/lists.dart';
+import 'widgets/loginPage.dart';
+import 'widgets/inputs.dart';
+import 'widgets/messages.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,9 +27,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const GridViewExample(), //bu homePage
+      home: const ToDoList(), //bu homePage
       routes: {
         '/SecondPage': (context) => const SecondPage(),
+        '/AddItem': (context) => const AddItem(),
+        '/ToDoList': (context) => const ToDoList(),
       },
     );
   }

@@ -3,7 +3,8 @@ import 'package:birinchi_proyekt/itemsOfTabBar/private.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'itemsOfTabBar/channel.dart';
+import '../itemsOfTabBar/channel.dart';
+
 
 class Calls extends StatefulWidget {
   const Calls({Key? key}) : super(key: key);

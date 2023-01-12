@@ -2,7 +2,7 @@ import 'package:birinchi_proyekt/items/itemOfList.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'items/itemOfListHorizontal.dart';
+import '../items/itemOfListHorizontal.dart';
 
 class Lists extends StatefulWidget {
   const Lists({Key? key}) : super(key: key);
