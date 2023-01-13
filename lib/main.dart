@@ -5,7 +5,6 @@ import 'package:birinchi_proyekt/widgets/second_page.dart';
 import 'package:birinchi_proyekt/widgets/tabBar.dart';
 import 'package:birinchi_proyekt/widgets/ui_intermediate.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'widgets/advancedListView.dart';
 import 'widgets/gridview.dart';
@@ -15,12 +14,9 @@ import 'widgets/inputs.dart';
 import 'widgets/messages.dart';
 
 void main() {
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(const MyApp());
 
 
-  FlutterNativeSplash.remove();
 }
 
 class MyApp extends StatelessWidget {
