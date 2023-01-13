@@ -22,9 +22,12 @@ class _ToDoListState extends State<ToDoList> {
           itemCount: list.length,
             itemBuilder: (context,index){
           return itemOfTodoList(
+            context,
               list[index]['title']!,
               list[index]['text']!,
-              list[index]['time']!);
+              list[index]['time']!,
+              index
+          );
         }),
       ),
       floatingActionButton: FloatingActionButton(
