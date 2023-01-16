@@ -3,7 +3,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 Widget itemOfTodoList(
-    BuildContext context, String title, String text, String currentTime,int index) {
+    BuildContext context,
+    String title,
+    String text,
+    String currentTime,
+    void Function() delete,
+    void Function() edit
+    ) {
   return Container(
     height: 65,
     padding: EdgeInsets.symmetric(horizontal: 5, vertical: 8),
@@ -29,25 +35,18 @@ Widget itemOfTodoList(
                   showDialog(
                       context: context,
                       builder: (BuildContext context) {
-                        return StatefulBuilder(builder: (context,setState){
-                          return  AlertDialog(
-                            title: Text('Action'),
-                            content: Text('What do you want?'),
-                            actions: [
-                              ElevatedButton(onPressed: () {},
-                                  child: Text('Edit')),
-                              ElevatedButton(
-                                  onPressed: () {
-
-                                    setState((){
-                                      list.removeAt(index);
-                                    });
-                                    Navigator.pop(context);
-                                  },
-                                  child: Text('Delete')),
-                            ],
-                          );
-                        });
+                        return AlertDialog(
+                          title: Text('Action'),
+                          content: Text('What do you want?'),
+                          actions: [
+                            ElevatedButton(
+                                onPressed: edit,
+                                child: Text('Edit')),
+                            ElevatedButton(
+                                onPressed: delete,
+                                child: Text('Delete')),
+                          ],
+                        );
                       });
                 },
                 child: Icon(
@@ -62,20 +61,18 @@ Widget itemOfTodoList(
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(
-              width: 300,
-              child: Text(
-                text,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.black38),
-              ),
+            Text(
+              text,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black38),
             ),
             Text(
               currentTime,
-              style: TextStyle(
+              maxLines: 1,
+              style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
                   color: Colors.black38),

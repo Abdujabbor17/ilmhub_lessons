@@ -1,11 +1,13 @@
 import 'package:birinchi_proyekt/splashPage.dart';
 import 'package:birinchi_proyekt/todoList/addItem.dart';
+import 'package:birinchi_proyekt/todoList/editItem.dart';
 import 'package:birinchi_proyekt/todoList/todolist.dart';
 import 'package:birinchi_proyekt/widgets/second_page.dart';
 import 'package:birinchi_proyekt/widgets/tabBar.dart';
 import 'package:birinchi_proyekt/widgets/ui_intermediate.dart';
 import 'package:flutter/material.dart';
 
+import 'onBoarding/onBoarding.dart';
 import 'widgets/advancedListView.dart';
 import 'widgets/gridview.dart';
 import 'widgets/lists.dart';
@@ -15,6 +17,7 @@ import 'widgets/messages.dart';
 
 void main() {
   runApp(const MyApp());
+
 
 
 }
@@ -30,7 +33,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ToDoList(), //bu homePage
+      home: const OnBoarding(), //bu homePage
       routes: {
         '/SecondPage': (context) => const SecondPage(),
         '/AddItem': (context) => const AddItem(),
