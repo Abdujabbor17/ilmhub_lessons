@@ -7,6 +7,8 @@ import 'package:birinchi_proyekt/widgets/tabBar.dart';
 import 'package:birinchi_proyekt/widgets/ui_intermediate.dart';
 import 'package:flutter/material.dart';
 
+import 'auth/login_page.dart';
+import 'auth/signup_page.dart';
 import 'onBoarding/onBoarding.dart';
 import 'widgets/advancedListView.dart';
 import 'widgets/gridview.dart';
@@ -38,6 +40,9 @@ class MyApp extends StatelessWidget {
         '/SecondPage': (context) => const SecondPage(),
         '/AddItem': (context) => const AddItem(),
         '/ToDoList': (context) => const ToDoList(),
+        '/LoginPage': (context) => const LoginPage1(),
+        '/SignUpPage': (context) =>  SignUpPage(),
+
       },
     );
   }

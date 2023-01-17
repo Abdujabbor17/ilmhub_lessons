@@ -38,20 +38,23 @@ class _OnBoardingState extends State<OnBoarding> {
             )
           ),
 
-          SmoothPageIndicator(
-            controller: _pageController,
-            // PageController
-            count:  3,
-            effect:   const SlideEffect(
-                spacing:  8.0,
-                radius:  4.0,
-                dotWidth:  24.0,
-                dotHeight:  5.0,
-                strokeWidth:  0,
-                dotColor:  Color(0xFFE8E8E8),
-                activeDotColor: Color(0xFFFFDF34)
-            ),  // your preferred effect
+          Container(
+          color: const Color(0xFFFFDF34).withOpacity(0.3),
+            child: SmoothPageIndicator(
+              controller: _pageController,
+              // PageController
+              count:  3,
+              effect:   const SlideEffect(
+                  spacing:  0.0,
+                  radius:  4.0,
+                  dotWidth:  50.0,
+                  dotHeight:  5.0,
+                  strokeWidth:  0,
+                  dotColor:  Colors.transparent,
+                  activeDotColor: Color(0xFFFFDF34)
+              ),  // your preferred effect
 
+            ),
           ),
           const SizedBox(height: 40,),
 
@@ -106,9 +109,7 @@ class _OnBoardingState extends State<OnBoarding> {
                       duration: const Duration(milliseconds: 500),
                       curve: Curves.easeInOut,
                     )
-                        :  MaterialPageRoute(
-                        builder: (context) => const ToDoList()
-                    );
+                        :  Navigator.pushNamed(context, '/LoginPage');
                   },
                 ),
               ],
