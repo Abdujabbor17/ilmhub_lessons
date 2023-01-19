@@ -1,3 +1,4 @@
+import 'package:birinchi_proyekt/shop_ui/home_page.dart';
 import 'package:birinchi_proyekt/splashPage.dart';
 import 'package:birinchi_proyekt/todoList/addItem.dart';
 import 'package:birinchi_proyekt/todoList/editItem.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const OnBoarding(), //bu homePage
+      home: const HomePage3(), //bu homePage
       routes: {
         '/SecondPage': (context) => const SecondPage(),
         '/AddItem': (context) => const AddItem(),
